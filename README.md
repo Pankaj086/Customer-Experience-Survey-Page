@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+Customer Experience Survey Page
+This project is a Customer Experience Survey built using React.js and React Router, styled with Tailwind CSS and Material UI. The survey is designed for use on a kiosk in a retail or customer-facing environment, allowing customers to provide feedback easily and efficiently.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Home Page: Welcomes users with a brief introduction to the survey and provides a "Start" button to begin the survey.
+Survey Questions: Five questions that capture various aspects of the customer experience, including satisfaction, value for money, and suggestions for improvement.
+Each question can feature either a rating scale or a text input for more detailed feedback.
+Survey responses are stored in the browser's localStorage, allowing users to navigate back and forth between questions without losing progress.
+Session Identification: Each survey session is assigned a unique session ID, stored locally to distinguish between different customer responses.
+Progress Indicator: A dynamic counter shows the user which question they are on and how many are left.
+Submit and Thank You Page: Once the survey is completed, users are thanked for their feedback and shown their unique session ID.
+Automatic Session Clearing: After the survey is submitted, the session and responses are cleared, ensuring that the next customer starts with a fresh session.
 
-## Available Scripts
+Technology Stack
+React.js: For building the user interface and handling state management.
+React Router: For navigating between the different pages of the survey (Home, Questions, Thank You).
+Tailwind CSS: For responsive and utility-first styling of components.
+Material UI: Used for components like the rating scale, ensuring a consistent and modern look and feel.
+Local Storage: Used to store survey responses locally, preserving answers even if the user navigates between questions.
+How It Works
+Users are greeted with a welcome message on the Home Page and click "Start" to begin the survey.
+The Questions Page dynamically loads each question and allows users to input their answers either by selecting a rating or typing feedback.
+Users can navigate between questions, and their progress is saved in localStorage.
+On completion, the Thank You Page is displayed with the session ID, and users are redirected back to the home page after a short delay.
+The session and responses are cleared once the user completes the survey, ensuring privacy and a fresh start for the next user.
 
-In the project directory, you can run:
+Getting Started
+To run this project locally:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clone the repository
+Install dependencies: npm install
+Start the development server: npm start
+Navigate to http://localhost:3000 in your browser
+Future Enhancements
+Backend Integration: Store responses in a database for deeper analysis.
+Session History: Keep track of multiple sessions for reporting purposes.
+Improved Accessibility: Add keyboard navigation and screen reader support.
+Multi-Language Support: Expand the survey to support multiple languages.
