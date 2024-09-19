@@ -71,29 +71,52 @@ function Questions() {
             navigate('/thankyou');
             setTimeout(() => {
                 navigate('/');
-            }, 5000);
+            }, 100005000);
         }
     };
 
     return (
         <div className='w-10/12 relative mx-auto flex flex-col gap-8 items-center'>
             <h1 className='fixed right-4 mt-4 px-4 py-2 bg-gray-600 text-white font-semibold text-lg rounded-lg'>{id+1}/{data.length}</h1>
-            <h1 className='text-5xl mt-24 text-slate-700 font-semibold'>{data[id].title}</h1>
 
-            {data[id].rating > 0 && (
-                <Rating
-                    name="simple-controlled"
-                    value={value}
-                    onChange={(event, newValue) => {
-                        setValue(newValue);
-                    }}
-                    max={data[id].rating}
-                    sx={{ '& .MuiRating-icon': { fontSize: '60px' } }}
-                />
-            )}
+            <h1 className='text-3xl sm:text-3xl md:text-5xl lg:text-5xl mt-24 text-slate-700 font-semibold'>{data[id].title}</h1>
+
+            <div className='w-full max-w-xl mx-auto flex justify-center'>
+                {data[id].rating > 0 && (
+                    <div className="flex flex-wrap justify-center">
+                        <Rating
+                            name="simple-controlled"
+                            value={value}
+                            onChange={(event, newValue) => {
+                                setValue(newValue);
+                            }}
+                            max={data[id].rating}
+                            sx={{ 
+                                '& .MuiRating-icon': { 
+                                    fontSize: {
+                                        xs: data[id].rating > 5 ? '30px' : '40px',
+                                        sm: data[id].rating > 5 ? '40px' : '50px', 
+                                        md: data[id].rating > 5 ? '50px' : '60px', 
+                                        lg: '60px',
+                                    },
+                                    margin: {
+                                        xs: '1px',
+                                        sm: '2px',
+                                        md: '3px',
+                                        lg: '3px',
+                                    },
+                                }
+                            }}
+                        />
+                    </div>
+                )}
+            </div>
+
+
+
 
             {data[id].text && (
-                <div className='w-full max-w-xl mx-auto'>
+                <div className='w-full max-w-xl mx-auto -mt-8 md:mt-0 lg:mt-0'>
                     <textarea
                         value={message}
                         onChange={handleChange}
@@ -106,7 +129,7 @@ function Questions() {
 
             <div className='relative flex justify-between sm:flex-col'>
                 <button
-                className="text-white bg-red-500 pl-2 pr-6 py-3 rounded-lg shadow-md hover:bg-red-600 transition fixed bottom-8 left-8 text-2xl"
+                className="text-white bg-red-500 pl-2 pr-6 py-2 rounded-lg shadow-md hover:bg-red-600 transition fixed bottom-8 left-8 text-xl md:text-2xl lg:text-2xl"
                 onClick={prevHandler}><NavigateNextIcon 
                         fontSize="large" 
                         style={{ transform: 'rotate(180deg)', transition: 'transform 0.3s ease' }} 
@@ -115,11 +138,11 @@ function Questions() {
                 {
                     id !== data.length - 1 ? (
                         <button
-                        className="text-white bg-red-500 pr-2 pl-6 py-3 rounded-lg shadow-md hover:bg-red-600 transition fixed bottom-8 right-8 text-2xl" 
+                        className="text-white bg-red-500 pr-2 pl-6 py-2 rounded-lg shadow-md hover:bg-red-600 transition fixed bottom-8 right-8 text-xl md:text-2xl lg:text-2xl" 
                         onClick={nextHandler}>Next<NavigateNextIcon fontSize="large"/></button>
                     ) : (
                         <button 
-                        className="text-white bg-green-500 px-6 py-4 rounded-lg shadow-md hover:bg-green-600 transition fixed bottom-8 right-8 text-2xl" onClick={submitHandler}>Submit</button>
+                        className="text-white bg-green-500 px-6 py-3 rounded-lg shadow-md hover:bg-green-600 transition fixed bottom-8 right-8 text-xl md:text-2xl lg:text-2xl" onClick={submitHandler}>Submit</button>
                     )
                 }
             </div>

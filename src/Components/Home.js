@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 function Home() {
     return (
-        <div className="w-10/12 mx-auto lg:flex  justify-between  p-6">
-            <div className='lg:w-6/12 flex flex-col items-center justify-center  p-6'>
-                <h1 className="text-6xl font-bold text-blue-600 mb-4">
+        <div className="w-10/12 mx-auto flex items-center gap-4  justify-between py-6 ">
+            <div className='lg:w-6/12 flex flex-col items-center justify-center '>
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 mb-4">
                     Welcome !
                 </h1>
-                <p className="text-xl text-gray-700 mb-8 text-center">
+                <p className="sm:text-sm md:text-xl lg:text-xl text-gray-700 mb-8 text-center">
                 Welcome to our customer experience survey! Your feedback is incredibly valuable to us. Ready to get started? Click the <span className='text-red-600 font-semibold'>Start</span> button below!
                 </p>
                 <Link to="/questions">
