@@ -21,7 +21,7 @@ function ThankYou() {
     }, 5000);
 
     return (
-        <div className="w-10/12 h-100vh mx-auto flex flex-col items-center justify-center ">
+        <div className="w-10/12 h-screen mx-auto flex flex-col items-center justify-center ">
             <div className="flex flex-col gap-8 text-center p-10">
                 <h1 className="text-4xl font-bold text-green-600 mb-4">Thank You!</h1>
                 <p className="text-2xl text-gray-700 mb-6">

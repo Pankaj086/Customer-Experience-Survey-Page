@@ -78,9 +78,9 @@ function Questions() {
     return (
         <>
             <h1 className='fixed right-4 mt-4 px-4 py-2 bg-gray-600 text-white font-semibold text-lg rounded-lg'>{id+1}/{data.length}</h1>
-        <div className='w-10/12 mt-24 lg:mt-32 relative mx-auto flex flex-col gap-8 items-center justify-center '>
+        <div className='w-10/12 h-screen  relative mx-auto flex flex-col gap-8 items-center justify-center'>
 
-            <h1 className='text-3xl sm:text-3xl md:text-5xl lg:text-5xl text-slate-700 font-semibold'>{data[id].title}</h1>
+            <h1 className='-mt-24 text-3xl sm:text-3xl md:text-5xl lg:text-5xl text-slate-700 font-semibold'>{data[id].title}</h1>
 
             <div className='w-full max-w-xl mx-auto flex justify-center'>
                 {data[id].rating > 0 && (

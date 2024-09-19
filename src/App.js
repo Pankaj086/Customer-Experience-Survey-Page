@@ -8,7 +8,7 @@ import ThankYou from './Components/Thankyou';
 function App() {
     return (
         <BrowserRouter>
-            <div className="App w-[100vw] h-[100vh] bg-gray-100">
+            <div className="App w-[100%] h-screen bg-gray-100">
                 <Navbar />
                 <Routes>
                     <Route index element={<Home />} />

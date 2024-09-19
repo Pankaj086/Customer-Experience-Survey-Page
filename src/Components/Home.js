@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
     return (
-        <div className="w-10/12 mx-auto flex items-center gap-4  justify-between py-6">
+        <div className="w-10/12 h-screen mx-auto flex justify-between items-center gap-4 -mt-8  ">
             <div className='lg:w-6/12 flex flex-col items-center justify-center '>
             <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 mb-4">
                     Welcome !
@@ -18,7 +18,7 @@ function Home() {
                     </button>
                 </Link>
             </div>
-            <div>
+            <div className='flex justify-center items-center'>
                 <img className='hidden lg:block w-[30rem] h-[30rem] rounded-lg shadow-xl' src='/welcome.jpeg' alt=''/>
             </div>
         </div>
