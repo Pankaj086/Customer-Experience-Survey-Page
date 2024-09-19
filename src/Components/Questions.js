@@ -71,7 +71,7 @@ function Questions() {
             navigate('/thankyou');
             setTimeout(() => {
                 navigate('/');
-            }, 100005000);
+            }, 5000);
         }
     };
 
